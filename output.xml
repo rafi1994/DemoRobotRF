@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220620 20:08:56.912" rpa="false" schemaversion="3">
+<suite id="s1" name="Dropdownmenu" source="D:\DemoRobotRF\dropdownmenu.robot">
+<test id="s1-t1" name="I am selecting &quot;Option 2&quot; in dropdown menu" line="11">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${base_url}</arg>
+<arg>${browser_type}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220620 20:08:57.308" level="INFO">Opening browser 'gc' to base url 'https://the-internet.herokuapp.com/dropdown'.</msg>
+<status status="PASS" starttime="20220620 20:08:57.308" endtime="20220620 20:09:21.344"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220620 20:09:21.344" endtime="20220620 20:09:21.474"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//select[@id="dropdown"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220620 20:09:21.509" level="INFO">Element '//select[@id="dropdown"]' is displayed.</msg>
+<status status="PASS" starttime="20220620 20:09:21.475" endtime="20220620 20:09:21.509"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>//select[@id="dropdown"]</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20220620 20:09:21.510" level="INFO">Selecting options from selection list '//select[@id="dropdown"]' by index 2.</msg>
+<status status="PASS" starttime="20220620 20:09:21.510" endtime="20220620 20:09:21.636"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220620 20:09:23.642" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220620 20:09:21.638" endtime="20220620 20:09:23.642"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>//select[@id="dropdown"]</arg>
+<arg>Option 2</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<msg timestamp="20220620 20:09:23.644" level="INFO">Verifying list '//select[@id="dropdown"]' has option [ Option 2 ] selected.</msg>
+<msg timestamp="20220620 20:09:23.654" level="INFO">Current page contains list '//select[@id="dropdown"]'.</msg>
+<status status="PASS" starttime="20220620 20:09:23.644" endtime="20220620 20:09:23.738"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220620 20:09:25.741" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220620 20:09:23.739" endtime="20220620 20:09:25.741"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220620 20:09:25.742" endtime="20220620 20:09:28.286"/>
+</kw>
+<status status="PASS" starttime="20220620 20:08:57.306" endtime="20220620 20:09:28.287"/>
+</test>
+<status status="PASS" starttime="20220620 20:08:56.919" endtime="20220620 20:09:28.288"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Dropdownmenu">Dropdownmenu</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
